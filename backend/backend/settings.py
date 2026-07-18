@@ -29,6 +29,8 @@ SECRET_KEY = 'django-insecure-0r5ga&c1xm516o2vth7o%nu#)5b-swzeoesp!w4o&l#9e7e$9b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+os.getenv("kcart")
+
 ALLOWED_HOSTS = [
      "127.0.0.1",
     "localhost",
@@ -140,8 +142,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",   # ✅ ADD THIS
     "http://127.0.0.1:5173",   # ✅ ADD THIS (important)
 
-    "http://localhost:5174",
-    "http://127.0.0.1:5174",
+    
 
     ]
 
