@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
 from pathlib import Path
+import dj_database_url
 import os
 from dotenv import load_dotenv
 from datetime import timedelta
@@ -112,6 +113,9 @@ DATABASES = {
         'PASSWORD': os.getenv('DB_PASSWORD'),
         'HOST': os.getenv('DB_HOST'),
         'PORT': os.getenv('DB_PORT'),
+        "default": dj_database_url.config(
+        default=os.getenv("DATABASE_URL")
+        )
     }
 }
 
